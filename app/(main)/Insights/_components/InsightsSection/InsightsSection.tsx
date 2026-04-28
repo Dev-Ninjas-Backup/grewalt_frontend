@@ -24,7 +24,7 @@ import weTasted from "@/public/new/AI-powered-tools_DALL-E.jpg"
 import chatgptVsCloude from "@/public/new/1_7Thzhjz-yhNS39HajTzTKA.png"
 import robotics from "@/public/new/20260425-RTI-Depositphotos_533106722_S.avif"
 import theAiDriven from "@/public/new/1751467913397.png"
-//
+////
 const articles = [
   {
     id: 1,
