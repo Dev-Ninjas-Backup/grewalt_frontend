@@ -7,167 +7,129 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-import web3Img from "@/public/insights/web3.jpg";
+// import web3Img from "@/public/insights/web3.jpg";
 import ai_team from "@/public/insights/ai-team.png";
 import ai_tool from "@/public/insights/ai-tool.png";
-import defi from "@/public/insights/defi.png";
+// import defi from "@/public/insights/defi.png";
 import high_signal from "@/public/insights/high-signal.png";
 import shifting from "@/public/insights/shifting.png";
-import evloving from "./imgs/evolving.png";
-import gold_vs_bitcoin from "./imgs/Gold-Vs-Bitcoin.jpg";
-import in_hand_bit from "./imgs/in-hand-web3.webp";
+// import evloving from "./imgs/evolving.png";
+// import gold_vs_bitcoin from "./imgs/Gold-Vs-Bitcoin.jpg";
+// import in_hand_bit from "./imgs/in-hand-web3.webp";
 import monitoring from "./imgs/monitoring.webp";
-import stable_coin from "./imgs/stable-coin.avif";
-import web3ki from "./imgs/web-ki.png";
-import { FiDownload } from "react-icons/fi";
+// import stable_coin from "./imgs/stable-coin.avif";
+// import web3ki from "./imgs/web-ki.png";
+// import { FiDownload } from "react-icons/fi";
+import weTasted from "@/public/new/AI-powered-tools_DALL-E.jpg"
+import chatgptVsCloude from "@/public/new/1_7Thzhjz-yhNS39HajTzTKA.png"
+import robotics from "@/public/new/20260425-RTI-Depositphotos_533106722_S.avif"
+import theAiDriven from "@/public/new/1751467913397.png"
 
 const articles = [
   {
     id: 1,
-    title:
-      "Why Your Company Can't Hire AI & Blockchain Talent (And What Actually Works)",
-    category: "Hiring",
+    title: "Why Most UK Businesses Are Getting AI Wrong — And What to Do Instead",
+    category: "Strategy",
     publishDate: "2026",
-    summary:
-      "72% of employers report difficulty filling roles, with AI expertise now the #1 hardest skill to find globally.",
-    image: shifting,
-    readTime: "6 min read",
-    tags: ["Hiring", "Market"],
+    summary: "Most UK businesses know they need AI but don't know where to start. Aventra³ explains the five most common AI adoption mistakes — and the clear path forward.",
+    image: ai_team,
+    readTime: "8 min read",
+    tags: ["Strategy", "Adoption"],
   },
   {
     id: 2,
-    title: "Why Firms Must Build AI Teams in 2026 — And Why Waiting Is Risky",
-    category: "AI",
+    title: "The Small Business Guide to AI Automation in 2026: Where to Start, What to Avoid, and What's Actually Worth It",
+    category: "Automation",
     publishDate: "2026",
-    summary:
-      "AI is no longer experimental technology. It is becoming core business infrastructure.",
-    image: ai_team,
-    readTime: "5 min read",
-    tags: ["AI", "Strategy"],
+    summary: "AI automation isn't just for large enterprises. This practical guide shows small businesses exactly where to start, what to avoid and what delivers real ROI in 2026.",
+    image: monitoring,
+    readTime: "7 min read",
+    tags: ["Automation", "Adoption"],
   },
   {
     id: 3,
-    title: "Web3 in 2025: From Hype to Infrastructure",
-    category: "Web3",
-    publishDate: "2025",
-    summary:
-      "Web3 is shifting toward infrastructure, compliance, and real-world use cases.",
-    image: web3Img,
-    readTime: "4 min read",
-    tags: ["Web3", "Blockchain"],
+    title: "The 10 AI Tools Every UK Business Should Know About in 2026",
+    category: "Agents",
+    publishDate: "2026",
+    summary: "From automation to content generation — these are the 10 AI tools delivering real results for UK businesses in 2026. An honest, vendor-neutral guide from Aventra³.",
+    image: ai_tool,
+    readTime: "10 min read",
+    tags: ["Automation", "Agents"],
   },
   {
     id: 4,
-    title: "Banks Need AI Engineers in Risk & Compliance",
-    category: "Regulation",
+    title: "AI Won't Replace Your Team — But It Will Change Every Job. Here's How to Prepare",
+    category: "Adoption",
     publishDate: "2026",
-    summary:
-      "Financial crime is becoming faster and complex. Banks now need AI engineers.",
-    image: high_signal,
-    readTime: "7 min read",
-    tags: ["AI", "Regulation"],
+    summary: "The fear that AI will replace jobs is understandable but largely misplaced. Here is what is actually changing, which roles are most affected, and how to prepare your business and your team.",
+    image: shifting,
+    readTime: "9 min read",
+    tags: ["Adoption", "Strategy", "Governance"],
   },
   {
     id: 5,
-    title: "Case Study: Scaling AML Infrastructure",
-    category: "Market",
+    title: "The Hidden Cost of Not Adopting AI: What Waiting Is Actually Costing Your Business",
+    category: "Strategy",
     publishDate: "2026",
-    summary:
-      "A Series A fintech tripled transaction volume. See how we deployed specialists.",
-    image: ai_tool,
+    summary: "Most businesses think doing nothing about AI is the safe option. It isn't. Here is what inaction is actually costing UK businesses right now — and what to do about it.",
+    image: high_signal,
     readTime: "8 min read",
-    tags: ["Market", "Case Study"],
+    tags: ["Strategy", "Adoption"],
   },
   {
     id: 6,
-    title: "Banks Are Quietly Building on Crypto",
-    category: "Web3",
+    title: "We Tested 12 AI Tools So Your Business Doesn't Have To: Here's What We Found",
+    category: "Agents",
     publishDate: "2026",
-    summary: "Major financial institutions are exploring blockchain rails.",
-    image: defi,
-    readTime: "5 min read",
-    tags: ["Web3", "Finance"],
+    summary: "Aventra³ spent six months testing 12 of the most talked-about AI tools for UK businesses. Here is an honest verdict on each one — what works, what doesn't, and what's worth your money.",
+    image: weTasted,
+    readTime: "12 min read",
+    tags: ["Automation", "Agents"],
   },
   {
     id: 7,
-    title: "AML Is Evolving — Are You?",
-    category: "Compliance & Professional Development",
+    title: "ChatGPT vs Claude vs Gemini: Which AI Tool Is Actually Right for Your Business in 2026?",
+    category: "Strategy",
     publishDate: "2026",
-    summary:
-      "Compliance isn't shrinking. It's evolving. As crypto adoption grows and AI becomes embedded in financial crime systems, analysts must specialize.",
-    image: evloving, // placeholder use kora hoyeche, proyojon moto change kore nio
-    readTime: "6 min read",
-    tags: ["Compliance", "AML", "Crypto"],
+    summary: "ChatGPT, Claude and Gemini are the three AI tools every UK business is comparing right now. Here is an honest, vendor-neutral breakdown of which one is right for your business.",
+    image: chatgptVsCloude,
+    readTime: "9 min read",
+    tags: ["Strategy", "Agents"],
   },
   {
     id: 8,
-    title: "Stablecoin Adoption: Opportunity vs Risk for Fintechs",
-    category: "Stablecoins & Risk Management",
+    title: "Robotic Process Automation in 2026: How AI Has Changed Everything",
+    category: "Automation",
     publishDate: "2026",
-    summary:
-      "Stablecoins are no longer fringe crypto instruments. With trillions in transaction volume, they are functioning as digital settlement rails.",
-    image: stable_coin,
+    summary: "RPA has been transformed by AI. UiPath, Automation Anywhere, n8n, Make — here is what robotic process automation means for UK businesses in 2026.",
+    image: robotics,
     readTime: "8 min read",
-    tags: ["Stablecoins", "Fintech", "Risk"],
+    tags: ["Automation", "Governance"],
   },
   {
     id: 9,
-    title: "How AI Is Reshaping Transaction Monitoring Architecture",
-    category: "AI & Financial Crime Prevention",
+    title: "The AI Divide Is Happening Right Now",
+    category: "Strategy",
     publishDate: "2026",
-    summary:
-      "Transaction monitoring is evolving from static rule systems to AI-driven risk intelligence infrastructure capable of detecting complex patterns.",
-    image: monitoring,
-    readTime: "7 min read",
-    tags: ["AI", "Architecture", "FinCrime"],
-  },
-  {
-    id: 10,
-    title: "Gold vs Bitcoin: Store of Value or Different Assets Entirely?",
-    category: "Digital Assets & Macro Finance",
-    publishDate: "2026",
-    summary:
-      "Gold and Bitcoin are often compared as alternative stores of value, but their economic roles and institutional paths remain fundamentally different.",
-    image: gold_vs_bitcoin,
-    readTime: "6 min read",
-    tags: ["Bitcoin", "Gold", "Macro"],
-  },
-  {
-    id: 11,
-    title: "What Is Web3 — And What Does It Mean for Businesses?",
-    category: "Web3 & Business Infrastructure",
-    publishDate: "2026",
-    summary:
-      "Web3 represents a new digital infrastructure built on blockchain networks that enables programmable assets and digital ownership for businesses.",
-    image: web3ki,
-    readTime: "5 min read",
-    tags: ["Web3", "Business", "Blockchain"],
-  },
-  {
-    id: 12,
-    title: "Web3 Operators. Not Just Engineers.",
-    category: "Web3 Industry Strategy",
-    publishDate: "2026",
-    summary:
-      "As Web3 matures, successful organisations are prioritising operational leadership and governance expertise alongside engineering talent.",
-    image: in_hand_bit,
-    readTime: "4 min read",
-    tags: ["Web3", "Strategy", "Operations"],
+    summary: "A permanent divide is opening between businesses building AI capability and those waiting. Most UK businesses don't realise which side they're on.",
+    image: theAiDriven,
+    readTime: "10 min read",
+    tags: ["Strategy", "Adoption"],
   },
 ];
 
-const CATEGORIES = ["All", "Market", "Hiring", "Regulation", "AI", "Web3"];
+const CATEGORIES = ["All", "Strategy", "Automation", "Agents", "Adoption", "Governance"];
 
 export default function InsightsPage() {
 
-const handleDownload = () => {
-  const link = document.createElement("a");
-  link.href = "/whitepaper.pdf"; // correct path
-  link.download = "Aventra3-Whitepaper-2026.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
+// const handleDownload = () => {
+//   const link = document.createElement("a");
+//   link.href = "/whitepaper.pdf"; // correct path
+//   link.download = "Aventra3-Whitepaper-2026.pdf";
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// };
 
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("All");
@@ -199,7 +161,7 @@ const handleDownload = () => {
           >
             <div className="flex items-center gap-2 text-[#2F8BDD] text-[11px] font-extrabold mb-4 tracking-widest">
               <span className="w-2 h-2 rounded-full bg-[#2F8BDD]" />
-              MARKET NOTES • HIRING SIGNALS • REGULATION • EXECUTION
+              AI STRATEGY • ADOPTION • AUTOMATION • AGENTS
             </div>
 
             <h1 className="text-[48px] md:text-[64px] font-bold text-[#05183D] mb-6 tracking-tight relative inline-block">
@@ -208,37 +170,11 @@ const handleDownload = () => {
             </h1>
 
             <p className="max-w-2xl text-slate-500 text-lg leading-relaxed">
-              A single place for market updates across AI, blockchain, DeFi and
-              Web3 — plus the hiring signals that matter.
+              Practical intelligence for business leaders navigating AI adoption
+              — what&apos;s working, what&apos;s not, and what&apos;s coming next.
             </p>
           </motion.div>
-          <a
-            href="/whitepaper.pdf"
-            download
-            className="
-    relative flex items-center justify-center gap-2 cursor-pointer
-    h-12 px-6 w-fit /* 2. Logic: Fixed width bad diye content onujayi padding deya hoyeche */
-    rounded-2xl
-    font-semibold text-white text-lg
-    bg-gradient-to-r from-[#6FDEF7] to-[#2F8BDD]
-    overflow-hidden
-    whitespace-nowrap /* 3. Logic: Text wrap bondho korar jonno */
-
-    transition-all duration-300 ease-in-out
-    hover:scale-105
-    hover:shadow-[0_0_25px_rgba(47,139,221,0.6)]
-    active:scale-95
-
-    before:absolute before:inset-0
-    before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent
-    before:translate-x-[-100%]
-    hover:before:translate-x-[100%]
-    before:transition-transform before:duration-700
-  "
-          >
-            <FiDownload className="text-xl transition-transform duration-300 group-hover:translate-y-1" />
-            <span>Download Our {new Date().getFullYear()} Whitepaper</span>
-          </a>
+       
         </div>
 
         {/* SEARCH */}
@@ -301,7 +237,7 @@ export const InsightCard = ({
   index,
 }: any) => {
   const router = useRouter();
-
+console.log(id)
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}

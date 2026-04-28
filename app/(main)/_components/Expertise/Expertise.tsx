@@ -21,7 +21,7 @@ const Expertise = () => {
   ];
 
   return (
-    <section className="bg-[#05112B] py-24 px-6 relative w-full overflow-hidden">
+    <section className="bg-[#05112B] py-10 px-6 relative w-full overflow-hidden">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center relative z-10">
         
         {/* Header */}

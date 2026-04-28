@@ -240,7 +240,7 @@ export default function ServicesPage() {
                 onClick={() => router.push("contact")}
                 className="group inline-flex items-center gap-2 w-fit px-6 py-3 rounded-full bg-[#2F8BDD] hover:bg-[#2677c4] text-white text-[14px] font-semibold transition-all duration-200 cursor-pointer shadow-[0_4px_14px_rgba(47,139,221,0.35)]"
               >
-                See How It Works
+                Discover Now
                 <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

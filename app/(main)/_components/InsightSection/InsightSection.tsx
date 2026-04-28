@@ -4,9 +4,10 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import blogImg1 from "@/public/insight/ai.png";
-import blogImg2 from "@/public/insight/ofc.png";
-import blogImg3 from "@/public/insight/btc.png";
+
+import web3Img from "@/public/insights/web3.jpg";
+import ai_team from "@/public/insights/ai-team.png";
+import shifting from "@/public/insights/shifting.png";
 import bgShape from "@/public/teamSection/Svg file 2.svg";
 
 import { InsightCard } from "../../Insights/_components/InsightsSection/InsightsSection";
@@ -16,33 +17,33 @@ import { useRouter } from "next/navigation";
 const INSIGHTS_DATA = [
   {
     id: 1,
-    image: blogImg1,
-    category: "Market",
-    date: "Dec 2025",
-    readTime: "4 min read",
-    title: "AI tooling consolidation: why it changes hiring",
-    description:
-      'As platforms consolidate, demand rises for integration, evaluation, and governance skills not only model building. It\'s a shift from "build" to "operate".',
+    title: "Why Most UK Businesses Are Getting AI Wrong — And What to Do Instead",
+    category: "Strategy",
+    publishDate: "2026",
+    summary: "Most UK businesses know they need AI but don't know where to start. Aventra³ explains the five most common AI adoption mistakes — and the clear path forward.",
+    image: ai_team,
+    readTime: "8 min read",
+    tags: ["Strategy", "Adoption"],
   },
   {
     id: 2,
-    image: blogImg2,
-    category: "Hiring",
-    date: "Dec 2025",
-    readTime: "4 min read",
-    title: "AI teams that scale: hire order that reduces risk",
-    description:
-      "The fastest teams follow a predictable sequence: product + data foundations → MLOps + reliability → applied scientists. Skip steps and you pay later.",
+    title: "The Small Business Guide to AI Automation in 2026: Where to Start, What to Avoid, and What's Actually Worth It",
+    category: "Automation",
+    publishDate: "2026",
+    summary: "AI automation isn't just for large enterprises. This practical guide shows small businesses exactly where to start, what to avoid and what delivers real ROI in 2026.",
+    image: web3Img,
+    readTime: "7 min read",
+    tags: ["Automation", "Adoption"],
   },
   {
     id: 3,
-    image: blogImg3,
-    category: "Regulation",
-    date: "Dec 2025",
-    readTime: "4 min read",
-    title: "DeFi compliance is becoming operational, not theoretical",
-    description:
-      "Teams are building controls, monitoring and reporting functions earlier — often using hybrid models: specialist squads + strategic hires.",
+    title: "The 10 AI Tools Every UK Business Should Know About in 2026",
+    category: "Agents",
+    publishDate: "2026",
+    summary: "From automation to content generation — these are the 10 AI tools delivering real results for UK businesses in 2026. An honest, vendor-neutral guide from Aventra³.",
+    image: shifting,
+    readTime: "10 min read",
+    tags: ["Automation", "Agents"],
   },
 ];
 
@@ -85,8 +86,7 @@ const InsightSection = () => {
 
           <div data-aos="fade-left" className="max-w-md pb-2">
             <p className="text-slate-300 text-[16px] mb-8 leading-relaxed">
-              Deep analysis across AI, DeFi, and Web3 — covering talent trends,
-              regulatory shifts, and operational strategies shaping the future.
+             Practical intelligence for business leaders navigating AI adoption – what's working, what's not, and what's coming next.
             </p>
 
             <button
@@ -101,18 +101,9 @@ const InsightSection = () => {
         {/* Insights Grid */}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-          {INSIGHTS_DATA?.map((insight, index) => (
-            <InsightCard
-              key={insight.id}
-              index={index}
-              image={insight.image}
-              category={insight.category}
-              date={insight.date}
-              readTime={insight.readTime}
-              title={insight.title}
-              summary={insight.description}
-            />
-          ))}
+          {INSIGHTS_DATA.map((insight, idx) => (
+                        <InsightCard key={insight.id} {...insight} index={idx} />
+                      ))}
         </div>
       </div>
     </section>
