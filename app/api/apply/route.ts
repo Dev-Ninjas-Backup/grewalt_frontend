@@ -11,6 +11,7 @@ export async function POST(req: Request) {
     const file = formData.get("cv") as File;
 
     const transporter = nodemailer.createTransport({
+      
       host: process.env.EMAIL_SMTP_SERVER,
       port: Number(process.env.EMAIL_SMTP_PORT),
       secure: true,
