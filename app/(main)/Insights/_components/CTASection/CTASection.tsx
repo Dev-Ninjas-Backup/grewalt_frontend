@@ -49,7 +49,7 @@ const route = useRouter()
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            TWe do. Tell us where you are and we'll show you exactly where AI can move the needle.
+          We do. Tell us where you are and we'll show you exactly where AI can move the needle.
           </p>
 
           {/* Action Buttons */}
