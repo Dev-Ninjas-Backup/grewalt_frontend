@@ -41,7 +41,7 @@ const route = useRouter()
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Need talent or a specialist squad?
+          Not sure where AI fits in your business?
           </h2>
 
           <p
@@ -49,8 +49,7 @@ const route = useRouter()
             data-aos="fade-up"
             data-aos-delay="400"
           >
-            Tell us what you’re building. We’ll advise on the right team
-            structure and deliver the talent to execute.
+            TWe do. Tell us where you are and we'll show you exactly where AI can move the needle.
           </p>
 
           {/* Action Buttons */}

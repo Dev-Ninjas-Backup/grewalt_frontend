@@ -73,7 +73,7 @@ const route = useRouter()
             </motion.button>
 
             {/* Secondary Button */}
-            <motion.button
+            {/* <motion.button
               onClick={() => route.push("contact")}
               whileHover={{
                 scale: 1.05,
@@ -83,7 +83,7 @@ const route = useRouter()
               className="px-10 py-4 border-[1.5px] cursor-pointer border-[#6FDEF7] text-[#2F8BDD] rounded-xl font-bold text-[16px] transition-all bg-transparent backdrop-blur-sm"
             >
               View Open Roles
-            </motion.button>
+            </motion.button> */}
           </div>
         </div>
       </div>
