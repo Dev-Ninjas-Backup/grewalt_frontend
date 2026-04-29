@@ -20,7 +20,7 @@ ENV NODE_ENV=production
 
 RUN addgroup -S nextjs && adduser -S nextjs -G nextjs
 
-COPY --from=builder /app ./
+COPY --from=builder --chown=nextjs:nextjs /app ./
 
 USER nextjs
 
