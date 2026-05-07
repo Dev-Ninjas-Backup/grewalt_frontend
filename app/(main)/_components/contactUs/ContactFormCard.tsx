@@ -34,15 +34,25 @@ const ContactFormCard = () => {
 
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
+    const token = typeof window !== "undefined" ? localStorage.getItem("emailPassToken") : null;
+    const headers: Record<string, string> = { "Content-Type": "application/json" };
+    if (token) headers.Authorization = `Bearer ${token}`;
 
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error();
+      const responseData = await res.json();
+
+      if (!res.ok) {
+        toast.error(responseData?.message || "Failed to send message. Please try again.", {
+          position: "top-right",
+        });
+        return;
+      }
 
       toast.success("Enquiry sent successfully!", {
         position: "top-right",
@@ -50,13 +60,16 @@ const ContactFormCard = () => {
         theme: "colored",
       });
 
-      e.currentTarget.reset();
+      if (e.currentTarget) {
+        e.currentTarget.reset();
+      }
       setService("");
       setTimeline("");
-    } catch {
-      // toast.error("Failed to send message. Please try again.", {
-      //   position: "top-right",
-      // });
+    } catch (error) {
+      console.error("[ContactForm] Error:", error);
+      toast.error("Network error. Please try again.", {
+        position: "top-right",
+      });
     } finally {
       setLoading(false);
     }

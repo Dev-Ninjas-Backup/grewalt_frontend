@@ -18,6 +18,7 @@ const route = useRouter()
     { name: "Clients", href: "/clients" },
     // { name: "Jobs", href: "/jobs" },
     { name: "Insights", href: "/Insights" },
+    // { name: "Settings", href: "/settings" },
   ];
 
   return (

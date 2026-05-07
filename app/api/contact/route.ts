@@ -1,6 +1,28 @@
 
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import jwt from "jsonwebtoken";
+
+const JWT_SECRET = process.env.JWT_SECRET || "change-this-secret";
+
+function getEmailPassword(req: Request) {
+  const authHeader = req.headers.get("authorization");
+  let password = process.env.EMAIL_PASS || "";
+
+  if (authHeader?.startsWith("Bearer ")) {
+    const token = authHeader.replace(/^Bearer /, "");
+    try {
+      const payload = jwt.verify(token, JWT_SECRET) as { email_pass?: string };
+      if (payload?.email_pass) {
+        password = payload.email_pass;
+      }
+    } catch (error) {
+      console.error("[contact] invalid JWT token", error);
+    }
+  }
+
+  return password;
+}
 
 export async function POST(req: Request) {
   try {
@@ -13,7 +35,7 @@ export async function POST(req: Request) {
       secure: true,
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        pass: getEmailPassword(req),
       },
     });
 

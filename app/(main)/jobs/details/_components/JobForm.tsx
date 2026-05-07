@@ -17,12 +17,35 @@ export default function JobForm() {
     e.preventDefault();
     setLoading(true);
     const formData = new FormData(e.currentTarget);
+    const token = typeof window !== "undefined" ? localStorage.getItem("emailPassToken") : null;
+    const headers: Record<string, string> = {};
+    if (token) headers.Authorization = `Bearer ${token}`;
 
     try {
-      const res = await fetch("/api/apply", { method: "POST", body: formData });
-      if (res.ok) toast("Application sent successfully!");
+      const res = await fetch("/api/apply", { method: "POST", body: formData, headers });
+      const responseData = await res.json();
+
+      if (!res.ok) {
+        toast.error(responseData?.message || "Failed to submit application. Please try again.", {
+          position: "top-right",
+        });
+        return;
+      }
+
+      toast.success("Application sent successfully!", {
+        position: "top-right",
+        autoClose: 5000,
+        theme: "colored",
+      });
+      if (e.currentTarget) {
+        e.currentTarget.reset();
+      }
+      setFileName("");
     } catch (err) {
-      alert("Something went wrong!");
+      console.error("[JobForm] Error:", err);
+      toast.error("Network error. Please try again.", {
+        position: "top-right",
+      });
     } finally {
       setLoading(false);
     }
