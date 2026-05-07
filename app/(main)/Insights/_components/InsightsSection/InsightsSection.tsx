@@ -22,7 +22,7 @@ import monitoring from "./imgs/monitoring.webp";
 // import { FiDownload } from "react-icons/fi";
 import weTasted from "@/public/new/AI-powered-tools_DALL-E.jpg"
 import chatgptVsCloude from "@/public/new/1_7Thzhjz-yhNS39HajTzTKA.png"
-import robotics from "@/public/new/20260425-RTI-Depositphotos_533106722_S.avif"
+import robotics from "@/public/new/20260425-RTI-Depositphotos_533106722_S.webp"
 import theAiDriven from "@/public/new/1751467913397.png"
 ////
 const articles = [

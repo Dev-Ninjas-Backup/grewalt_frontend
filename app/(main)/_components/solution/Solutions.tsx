@@ -7,7 +7,7 @@ import SolutionCard from "./SolutionCard";
 
 import img1 from "@/public/service/ai_roadmap_teamwork_802_bfb7e7791b.webp";
 import img2 from "@/public/service/GettyImages-2216190809.webp";
-import img3 from "@/public/service/ai-interface-laptop-screen_161754-23987.avif";
+import img3 from "@/public/service/ai-interface-laptop-screen_161754-23987.webp";
 
 const Solutions = () => {
   const solutionData = [
