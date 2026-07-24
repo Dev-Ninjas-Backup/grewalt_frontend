@@ -23,7 +23,7 @@ const TeamCard = ({ name, role, image, index }: TeamMemberProps) => {
             src={image}
             alt={name}
             fill
-            className={`object-cover transition-transform duration-700   ${(index === 1 || index === 3)? "scale-110" : ""}`}
+            className={`object-cover transition-transform duration-700   ${(index === 0 || index === 3)? "scale-110" : ""}`}
           />
         </div>
       </div>

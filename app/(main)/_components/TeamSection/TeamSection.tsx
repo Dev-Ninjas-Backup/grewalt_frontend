@@ -5,35 +5,42 @@ import "aos/dist/aos.css";
 
 import TeamCard from "./TeamCard";
 
-import img4 from "@/public/newImg/img1.jpg";
-import img1 from "@/public/newImg/img2.jpg";
-import img3 from "@/public/newImg/img3.jpg";
-import img2 from "@/public/newImg/img4.jpg";
+import imgSam from "@/public/newImg/img1.jpg";
+import imgTerath from "@/public/newImg/img2.jpg";
+import imgZhang from "@/public/newImg/img3.jpg";
+import imgManj from "@/public/newImg/img4.jpg";
+import imgTheranam from "@/public/newImg/theranam-chahal.png";
 
 const TEAM_DATA = [
   {
     id: 1,
-    name: "Terath Grewal",
-    role: "Co-Founder & CEO, AI Strategy",
-    image: img1,
+    name: "Manj Singh",
+    role: "Founder - AI Innovation – Strategy, GTM & Impact",
+    image: imgManj,
   },
   {
     id: 2,
-    name: "Manj Singh",
-    role: "Co-Founder & Head of Client Advisory",
-    image: img2,
+    name: "Terath Grewal",
+    role: "AI Solutions Director (Banking)",
+    image: imgTerath,
   },
   {
     id: 3,
     name: "Zhang Wei",
-    role: "Head of AI Implementation",
-    image: img3,
+    role: "AI Engineer",
+    image: imgZhang,
   },
   {
     id: 4,
-    name: "Sam Hirsch",
-    role: "AI Solutions Architect",
-    image: img4,
+    name: "Sam Harrinson",
+    role: "AI Architect",
+    image: imgSam,
+  },
+  {
+    id: 5,
+    name: "Theranam Chahal",
+    role: "Change & Transformation (Finance)",
+    image: imgTheranam,
   },
 ];
 
@@ -63,7 +70,7 @@ const TeamSection = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 w-full">
           {TEAM_DATA.map((member, index) => (
             <TeamCard
               key={member.id}
