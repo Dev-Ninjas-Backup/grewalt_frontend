@@ -1,3 +1,7 @@
-:80 {
+aventra3.com {
     reverse_proxy app:3000
+}
+
+www.aventra3.com {
+    redir https://aventra3.com{uri} permanent
 }
