@@ -19,17 +19,7 @@ const TermAndCondition = () => {
 
         {/* Operational Info Section */}
         <div className="space-y-4 mb-20 border-l-4 border-[#56C1ED] pl-6 py-2">
-          <p className="leading-relaxed">
-            Aventra3 is operated by{" "}
-            <strong>{TERMS_DATA.companyInfo.name}</strong>, a company registered
-            in England & Wales under company number{" "}
-            <strong>{TERMS_DATA.companyInfo.regNumber}</strong>, with its
-            registered office at:
-          </p>
-          <p className="font-medium text-[#0D1B3E] whitespace-pre-line">
-            {TERMS_DATA.companyInfo.address}
-          </p>
-          <p className="pt-4 text-sm md:text-base text-gray-600">
+          <p className="text-sm md:text-base text-gray-600">
             By accessing{" "}
             <span className="text-[#2F8BDD] underline cursor-pointer">
               {TERMS_DATA.companyInfo.website}
