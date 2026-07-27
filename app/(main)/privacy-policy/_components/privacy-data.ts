@@ -4,7 +4,6 @@ export const PRIVACY_CONTENT = {
   intro:
     "For the purposes of UK data protection law, we act as a Data Controller in relation to personal data collected through our website and client engagements.",
   companyDetails: {
-    number: "16066406",
     office:
       "Studio 9, 50–54 St. Pauls Square, Birmingham, United Kingdom, B3 1QS",
     website: "www.aventra3.com",
@@ -15,7 +14,7 @@ export const PRIVACY_CONTENT = {
       id: 1,
       title: "Who We Are",
       content:
-        "MKTG INTELLECT GROUP UK LIMITED (trading as Aventra³) is an AI consulting and advisory firm helping businesses adopt artificial intelligence.",
+        "Aventra3 is an AI consulting and advisory firm helping businesses adopt artificial intelligence.",
     },
     {
       id: 2,

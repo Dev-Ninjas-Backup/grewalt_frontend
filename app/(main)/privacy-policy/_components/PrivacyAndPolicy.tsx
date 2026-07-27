@@ -20,10 +20,6 @@ const PrivacyAndPolicy = () => {
 
         {/* Company Info Box */}
         <div className="space-y-3 mb-20 text-sm md:text-base border-l-4 border-[#56C1ED] pl-6 py-2">
-          <p>
-            <strong>Company Number:</strong>{" "}
-            {PRIVACY_CONTENT.companyDetails.number}
-          </p>
           <p className="max-w-sm">
             <strong>Registered Office:</strong>{" "}
             {PRIVACY_CONTENT.companyDetails.office}
@@ -109,14 +105,6 @@ const PrivacyAndPolicy = () => {
               <p>
                 For any questions about this Privacy Policy or how we handle your data:
               </p>
-              <div className="space-y-1 font-medium">
-                <p>MKTG INTELLECT GROUP UK LIMITED</p>
-                <p>Company Number: 16066406</p>
-                <p>Studio 9, 50-54 St. Pauls Square</p>
-                <p>Birmingham</p>
-                <p>United Kingdom</p>
-                <p>B3 1QS</p>
-              </div>
               <div className="pt-4 space-y-2">
                 <p>
                   <strong>Email:</strong> info@aventra3.com

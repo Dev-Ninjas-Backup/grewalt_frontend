@@ -84,14 +84,6 @@ const TermAndCondition = () => {
               <p>
                 For any questions regarding these Terms:
               </p>
-              <div className="space-y-1 font-medium">
-                <p>MKTG INTELLECT GROUP UK LIMITED</p>
-                <p>Company Number: 16066406</p>
-                <p>Studio 9, 50-54 St. Pauls Square</p>
-                <p>Birmingham</p>
-                <p>United Kingdom</p>
-                <p>B3 1QS</p>
-              </div>
               <div className="pt-4 space-y-2">
                 <p>
                   <strong>Email:</strong> info@aventra3.com
