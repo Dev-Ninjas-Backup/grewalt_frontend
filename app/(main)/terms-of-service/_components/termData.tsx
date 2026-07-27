@@ -25,7 +25,7 @@ export const TERMS_DATA = {
       content:
         "By using this website, you agree that you will not copy, reproduce or redistribute website content without prior written permission, scrape, extract or harvest data from the website, attempt to breach or test website security, or use the website for unlawful, fraudulent or misleading purposes.",
       footer:
-        "All content, branding, frameworks, methodologies and written materials published on this website are the intellectual property of MKTG INTELLECT GROUP UK LIMITED.",
+        "All content, branding, frameworks, methodologies and written materials published on this website are the intellectual property of Aventra3.",
     },
     {
       id: "3",
@@ -96,7 +96,7 @@ export const TERMS_DATA = {
       id: "12",
       title: "Intellectual Property",
       content:
-        "All intellectual property rights in website content, branding, consulting frameworks, methodologies, tools and written materials belong to MKTG INTELLECT GROUP UK LIMITED. No content may be reproduced, distributed or commercially exploited without prior written consent.",
+        "All intellectual property rights in website content, branding, consulting frameworks, methodologies, tools and written materials belong to Aventra3. No content may be reproduced, distributed or commercially exploited without prior written consent.",
       footer:
         "Deliverables produced specifically for a client under a written engagement agreement are owned by the client upon receipt of full payment, unless otherwise agreed in writing.",
     },
